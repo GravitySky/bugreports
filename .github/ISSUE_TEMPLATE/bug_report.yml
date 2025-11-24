@@ -1,0 +1,64 @@
+name: Minecraft Server Bug Report
+description: Report a bug from our Minecraft server
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the form below with as much detail as possible.
+  
+  - type: dropdown
+    id: mod-loader
+    attributes:
+      label: Mod Loader Type
+      description: What type of mod loader are you using?
+      options:
+        - Vanilla
+        - Fabric
+        - Forge
+        - NeoForge
+        - Quilt
+        - Other
+    validations:
+      required: true
+  
+  - type: input
+    id: mods-modpack
+    attributes:
+      label: Mods/Modpack
+      description: Which mods or modpack are you using? Please include versions if possible.
+      placeholder: "e.g., Create Mod 0.5.1, All the Mods 9, etc."
+    validations:
+      required: false
+  
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Please describe the bug you encountered. What did you expect to happen vs. what actually happened?
+      placeholder: "I expected X to happen, but instead Y happened..."
+    validations:
+      required: true
+  
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: What steps led to this bug? Please be as detailed as possible.
+      placeholder: |
+        1. Join the server
+        2. Go to location X
+        3. Interact with block/entity Y
+        4. Bug occurs
+    validations:
+      required: true
+  
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here. Screenshots, logs, or crash reports are helpful!
+      placeholder: You can paste crash logs, screenshots, or any additional information here.
+    validations:
+      required: false
